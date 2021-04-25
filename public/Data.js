@@ -28,6 +28,7 @@ $.post({
         else{
             datak = dataIn;
             //console.log(dataf); //<option value="1">1</option>
+            $("#country").html('');
             $("#country").append('<option value="" selected disabled>Elegir</option>');
             for(j = 0; j < datak.length; j++) {
                 /*if(dataf[i].var2 === null) {
@@ -56,6 +57,7 @@ document.getElementById("country").addEventListener("change", function() {
             else{
                 datak = dataIn;
                 //console.log(dataf); //<option value="1">1</option>
+                $("#state").html('');
                 $("#state").append('<option value="" selected disabled>Elegir</option>');
                 for(k = 0; k < datak.length; k++) {
                     /*if(dataf[i].var2 === null) {
@@ -80,8 +82,8 @@ document.getElementById("state").addEventListener("change", function() {
         success: function (dataIn, status) {
             if (dataIn === "Not") {
                 console.log("SIN RESPUESTA DE /CITY");
-                $("#city").html('');
-                alert("No hay información de esta ciudad")
+                $("#city").html('<option value="All">Todos</option>');
+                alert("No hay información de estas ciudades")
             }
             else{
                 datak = dataIn;
@@ -105,7 +107,9 @@ document.getElementById("Buscar").addEventListener("click", function() {
     //Toma el dato seleccionado en la pag para buscar en la base de datos
     dataSelected.country = document.Data.country.options[document.Data.country.selectedIndex].value;
     dataSelected.state = document.Data.state.options[document.Data.state.selectedIndex].value;
-    dataSelected.city = document.Data.city.options[document.Data.city.selectedIndex].value;
+    if (document.Data.city.options[document.Data.city.selectedIndex].value) {
+        dataSelected.city = document.Data.city.options[document.Data.city.selectedIndex].value;
+    }
 
     if (dataSelected.state === "All") {
 
@@ -115,12 +119,16 @@ document.getElementById("Buscar").addEventListener("click", function() {
         data: JSON.stringify(dataSelected),
         contentType: "application/json",
         success: function (dataIn, status) {
+            console.log(dataSelected);
             if (dataIn === "Not") {
-                alert("Debe seleccionar una opción adecuada en Fecha y ID Dispositivo");
+                alert("No hay información de estas ciudades");
+            }
+            if (dataIn === "Not2") {
+                alert("Por favor selecciona una opción en País, Estado y Ciudad");
             }
             else{
                 dataf = dataIn;
-                console.log(dataSelected);
+                console.log(dataIn);
                 $("#Table").html("<tbody id='Table'> </tbody>");
                 for(i = 0; i < dataf.length; i++) {
                     /*if(dataf[i].var2 === null) {
