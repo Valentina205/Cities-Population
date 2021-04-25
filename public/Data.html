@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cities Population</title>
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="Data.css" />
+
+		<!-- FONT -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Font Awesome (Iconos) -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+		/>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="#">Cities Population</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#"
+								>Datos <span class="sr-only">(current)</span></a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div id="Cont">
+				<h4>
+					Seleccione el país y el estado del cuál desea obtener la información:
+				</h4>
+
+				<form class="form-inline" id="Datos" name="Data">
+					<label class="my-1 mr-2" for="inlineFormCustomSelectPref">País: </label>
+					<select class="custom-select my-1 mr-sm-2" name="country" id="country">
+						<!-- <option value="" selected disabled>Elegir</option> -->
+						<!-- <option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="All">Todos</option> -->
+					</select>
+
+					<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Estado: </label>
+					<select class="custom-select my-1 mr-sm-2" name="state" id="state">
+						<!-- <option value="" selected disabled>Elegir</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="All">Todos</option> -->
+					</select>
+					<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Ciudad: </label>
+					<select class="custom-select my-1 mr-sm-2" name="city" id="city">
+						<!-- <option value="" selected disabled>Elegir</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="All">Todos</option> -->
+					</select>
+
+					<button type="button" class="btn btn-light my-1 Boton" id="Buscar">
+						Buscar
+					</button>
+					<button type="button" class="btn btn-light my-1 Boton" id="Eliminar">
+						Limpiar tabla
+					</button>
+				</form>
+
+				<table class="table">
+					<thead>
+						<tr class="table-light">
+							<th scope="col">Ciudad</th>
+							<th scope="col">Población</th>
+						</tr>
+					</thead>
+					<tbody id="Table">
+						<!-- <tr>
+                    <th>1</th>
+                    <td>Enero 1</td>
+                    <td>12 °C</td>
+                    <td>90 %</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>Enero 1</td>
+                    <td>7 pH</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>Enero 1</td>
+                    <td>80 %</td>
+                    <td> </td>
+                  </tr> -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<!-- Librerias para que funciones JQuery-->
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+
+		<script type="text/javascript" src="Data.js"></script>
+	</body>
+</html>

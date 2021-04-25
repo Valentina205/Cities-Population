@@ -1,0 +1,30 @@
+body {
+	background: url(https://images.unsplash.com/photo-1495314736024-fa5e4b37b979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: Raleway;
+}
+
+.navbar-brand {
+	font-weight: 700;
+}
+
+#Cont {
+	margin: 0px auto;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	max-width: 900px;
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+}
+
+#Datos {
+	margin: 20px 20px;
+}
+
+.Boton {
+	margin-right: 10px;
+	border-color: lightgray;
+	outline: none;
+}
